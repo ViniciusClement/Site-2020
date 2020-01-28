@@ -61,7 +61,7 @@ header .container {
 }
 
 
-/* Main */
+																							/*		 Main			 */
 .main {
 	grid-area:main;
 }
@@ -101,14 +101,15 @@ header .container {
 }
 
 .content-principal a {
-	background-color: rgba(255, 255, 255, 0.582);
 	padding: 12px 34px;
 	font-weight: 500;
 	text-transform: uppercase;
+	color:white;
+	border:1px solid white;
 }
 
 
-/* Second  Section*/
+																					/*		 Second			*/
 .second {
 	max-width: 1200px;
 	/* background-color: aquamarine; */
@@ -157,9 +158,8 @@ header .container {
 .second-container p {
 	line-height: 27px;
 }
+																					/*		 Terceiro			*/
 
-
-/* Terceiro Section*/
 .terceiro {
 	width:98.8vw;
 	height: 90vh;
@@ -200,11 +200,12 @@ header .container {
 }
 
 .content-terceiro > a {
-	background-color: rgb(24, 23, 23);
+	/* background-color: rgb(24, 23, 23); */
 	padding: 12px 34px;
 	font-weight: 500;
+	/* color:white; */
+	border:1px solid black; 
 	text-transform: uppercase;
-	color:white;
 }
 
 .img-terceiro > img{
@@ -212,7 +213,7 @@ header .container {
 	border-radius:10px;
 }
 
-/* Four Section */
+																						/*		 Four			*/
 .four {
 	width:98.8vw;
 	height: 95vh;
@@ -295,7 +296,7 @@ header .container {
 
 .four-container a {
 	display: block;
-	background-color: rgba(0, 0, 0, 0.144);
+	border:1px solid rgba(0, 0, 0, 0.349);
 	margin:0px 20px;
 	text-align: center;	
 	padding:10px 0px;
@@ -306,11 +307,10 @@ header .container {
 }
 
 
-/* Section Five */
+																						/*		 Five			*/
 .five {
 	width: 98.8vw;
 	height: 100vh;
-	/* background-color: sienna; */
 }
 
 .five > h3 {
@@ -332,37 +332,74 @@ header .container {
 		display:grid;
 		grid-template-columns: 1fr 1fr;
 		gap: 10px;
-		/* background-color: springgreen; */
 		padding:0 20px;
 	}
 
  .five-img-1 {
 		grid-row: 1/4;
-		background-color: royalblue;
+		background-image: url(../img/picture/mobile-phone-1875813_1280.jpg);
+		background-position:center;
+		background-size: cover;
 		width: 50vw;
 		height: 80vh;
+		cursor: pointer;
 	}
 
 	.five-img-2 {
 		width: 45vw;
 		height: 39vh;
-		background-color: skyblue;
+		background-image: url(../img/picture/laptop-1205256_1280.jpg);
+		background-position:center;
+		background-size: cover;
+		cursor: pointer;
 	}
 
 	.five-img-3 {
 		width: 45vw;
 		height: 39vh;
-		background-color: rgb(195, 135, 235);
+		background-image: url(../img/picture/technology-2589463_1280.jpg);
+		background-position:center;
+		background-size: cover;
+		cursor: pointer;
+	}
+
+	.content-five {
+		height: 100%;
+		text-align: center;
+		padding:0 50px;
+		/* background-color: brown; */
+	}
+
+	.five-img-1 {
+		padding-top: 35%;
+	}
+
+	.five-img-1 .content-five > h3 {
+		font-weight: 500;
+		text-transform: uppercase;
+		color:white;
+		font-size: 24px;
+		/* border-bottom: 1px solid rgb(233, 225, 225); */
+	}
+
+	.five-img-1 .content-five > h3::after {
+		content: "";
+		width: 100px;
+		height: 2px;
+		display: block;
+		background-color: rgba(255, 255, 255, 0.678);
+		margin: 5px auto;
+	}	
+
+	.five-img-1 .content-five > p {
+		color:white;
+		font-size: 18px;
 	}
 
 
 
 
-
-
-
-
-/* RESPONSIVIDADE */
+																			/* 		RESPONSIVIDADE 			*/
 
 /* Media Screen - Tablet*/
 @media screen and (max-width:850px) {
