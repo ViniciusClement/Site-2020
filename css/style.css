@@ -242,6 +242,7 @@ header .container {
 	grid-template-areas:"div1 div2 div3 div4";
 	grid-gap: 30px;
 	justify-content: center;;
+	cursor: default;
 }
  
 .four-1 {
@@ -250,6 +251,7 @@ header .container {
 	width:300px;
 	height: 70vh;
 	box-shadow: 3px 3px 5px 3px rgba(0, 0, 0, 0.253);
+	transition: 0.5s;
 }
 
 .four-2 {
@@ -258,6 +260,7 @@ header .container {
 	width:300px;
 	height: 70vh;
 	box-shadow: 3px 3px 5px 3px rgba(0, 0, 0, 0.253);
+	transition: 0.5s;
 }
 
 .four-3 {
@@ -266,6 +269,7 @@ header .container {
 	width:300px;
 	height: 70vh;
 	box-shadow: 3px 3px 5px 3px rgba(0, 0, 0, 0.253);
+	transition: 0.5s;
 }
 
 .four-4 {
@@ -274,6 +278,7 @@ header .container {
 	width:300px;
 	height: 70vh;
 	box-shadow: 3px 3px 5px 3px rgba(0, 0, 0, 0.253);
+	transition: 0.5s;
 }
 
 .img-four-1 img {	width:300px;}
@@ -328,74 +333,143 @@ header .container {
 	margin-bottom: 50px;
 }
 
-	.five-container {
-		display:grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 10px;
-		padding:0 20px;
-	}
+.container-five {
+	display: grid;
+	grid-template-areas: "box1 box2 box3";
+	justify-content: center;
+	text-align: center;
+	grid-gap: 20px;
+}
 
- .five-img-1 {
-		grid-row: 1/4;
-		background-image: url(../img/picture/mobile-phone-1875813_1280.jpg);
-		background-position:center;
-		background-size: cover;
-		width: 50vw;
-		height: 80vh;
-		cursor: pointer;
-	}
+#box-1 {
+	grid-area:box1;
+}
+#box-2 {
+	grid-area:box2;
+}
+#box-3 {
+	grid-area:box3;
+}
 
-	.five-img-2 {
-		width: 45vw;
-		height: 39vh;
-		background-image: url(../img/picture/laptop-1205256_1280.jpg);
-		background-position:center;
-		background-size: cover;
-		cursor: pointer;
-	}
+.container-five .box {
+	position: relative;
+	width: 350px;
+	height: 350px;
+	overflow: hidden;
+	transition: 0.5s;
+}
 
-	.five-img-3 {
-		width: 45vw;
-		height: 39vh;
-		background-image: url(../img/picture/technology-2589463_1280.jpg);
-		background-position:center;
-		background-size: cover;
-		cursor: pointer;
-	}
+.container-five .box .imgBox {
+	position: absolute;
+	top:0px;	
+	left: 0px;
+	width: 100%;
+	height:100%;
+}
 
-	.content-five {
-		height: 100%;
-		text-align: center;
-		padding:0 50px;
-		/* background-color: brown; */
-	}
+.container-five .box .imgBox img {
+	position: absolute;
+	top:0px;
+	left: 0px;
+	width: 100%;
+	height:100%;
+	object-fit: cover;
+}
 
-	.five-img-1 {
-		padding-top: 35%;
-	}
+.container-five .box .content {
+	position: absolute;
+	top:0px;
+	left: 0px;
+	width: 100%;
+	height:100%;
+	z-index: 1;
+	padding:20px;
+	margin-top: 70px;
+}
 
-	.five-img-1 .content-five > h3 {
-		font-weight: 500;
-		text-transform: uppercase;
-		color:white;
-		font-size: 24px;
-		/* border-bottom: 1px solid rgb(233, 225, 225); */
-	}
+.container-five .box .content h3 {
+	color:white;
+	font-weight: 500;
+	font-size: 24px;
+	text-transform: uppercase;
+	transition:0.5s;
+	margin-bottom:10px;
+	transform: translateY(260px);
+	cursor:default;
+}
 
-	.five-img-1 .content-five > h3::after {
-		content: "";
-		width: 100px;
-		height: 2px;
-		display: block;
-		background-color: rgba(255, 255, 255, 0.678);
-		margin: 5px auto;
-	}	
+.container-five .box .content p {
+	color:white;
+	opacity: 0.8;
+	transition:0.7s;
+	transform: translateY(260px);
+	margin-bottom:30px;
+	cursor:default;
+}
 
-	.five-img-1 .content-five > p {
-		color:white;
-		font-size: 18px;
-	}
+.container-five .box .content a {
+	color:white;
+	text-transform: uppercase;
+	display: inline-block;
+	border:1px solid rgb(255, 255, 255);	
+	padding:10px 30px;
+	transition:0.7s;
+	transform: translateY(260px);
+}
 
+
+																		/*		 		Animations				*/
+	.container-five .box:hover {
+	z-index: 1;
+	transform: scale(1.1);
+	box-shadow: 0 25px 40px rgba(0, 0, 0, 0.5);
+}
+
+.container-five .box .imgBox:before {
+	content:"";
+	position: absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height: 100%;
+	z-index: 1;
+	background: linear-gradient(1deg,black,rgba(0, 0, 0, 0.39));
+	mix-blend-mode: multiply;
+	transition: 0.5s;
+	opacity: 0;
+}
+
+.container-five .box:hover .imgBox:before{
+	opacity: 1;
+}
+
+.container-five .box:hover .content h3 {
+	transition:0.5s;
+	transform: translateY(0);
+}
+
+.container-five .box:hover .content p {
+	transition:0.7s;
+	transform: translateY(0);
+}
+
+.container-five .box:hover .content a {
+	transition:0.7s;
+	transform: translateY(0);
+}
+
+.four-1:hover, .four-2:hover, .four-3:hover, .four-4:hover{
+	transform: scale(1.1);
+	box-shadow: 0 25px 40px rgba(0, 0, 0, 0.5);
+	background: linear-gradient(1deg,black,rgb(21, 184, 175));
+	color:white;
+	transition: 0.5s;
+}
+
+.four-1:hover a, .four-2:hover a, .four-3:hover a, .four-4:hover a {
+	border:1px solid rgb(255, 255, 255);
+	color:white;
+}
 
 
 
