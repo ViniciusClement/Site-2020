@@ -60,7 +60,6 @@ header .container {
 	height: 15px;
 }
 
-
 																							/*		 Main			 */
 .main {
 	grid-area:main;
@@ -106,6 +105,7 @@ header .container {
 	text-transform: uppercase;
 	color:white;
 	border:1px solid white;
+	transition:0.6s;
 }
 
 
@@ -200,10 +200,9 @@ header .container {
 }
 
 .content-terceiro > a {
-	/* background-color: rgb(24, 23, 23); */
+	transition:0.6s;	
 	padding: 12px 34px;
 	font-weight: 500;
-	/* color:white; */
 	border:1px solid black; 
 	text-transform: uppercase;
 }
@@ -316,6 +315,9 @@ header .container {
 .five {
 	width: 98.8vw;
 	height: 100vh;
+	margin-bottom: 40px;
+	background-color: #f1f1f1 !important;
+	padding-top: 100px;
 }
 
 .five > h3 {
@@ -417,8 +419,46 @@ header .container {
 	transform: translateY(260px);
 }
 
+																/*		 Six			 */
 
-																		/*		 		Animations				*/
+.six {
+	width: 98.8vw;
+	height: 50vh;
+	text-align: center;
+}
+
+.container-six {
+	width:30vw;
+	text-align: center;
+	padding-top:20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+	/* background-color: teal; */
+}
+
+.six > a {
+		padding: 12px 34px;
+		font-weight: 500;
+		border:1px solid rgb(0, 0, 0); 
+		text-transform: uppercase;
+		display: inline-block;
+		margin-top:80px;
+		margin-bottom:20px;
+	}
+
+	.icons-2 {
+		width: 48px;
+		height: 48px;
+		cursor: pointer;
+		margin:10px;
+		margin-bottom:20px;
+	}
+
+	#to-top {transition:0.6s;}
+
+																				/*		 		Animations				*/
 	.container-five .box:hover {
 	z-index: 1;
 	transform: scale(1.1);
@@ -461,7 +501,7 @@ header .container {
 .four-1:hover, .four-2:hover, .four-3:hover, .four-4:hover{
 	transform: scale(1.1);
 	box-shadow: 0 25px 40px rgba(0, 0, 0, 0.5);
-	background: linear-gradient(1deg,black,rgb(21, 184, 175));
+	background: linear-gradient(1deg,rgb(90, 87, 87),rgb(0, 0, 0));
 	color:white;
 	transition: 0.5s;
 }
@@ -471,7 +511,23 @@ header .container {
 	color:white;
 }
 
+.content-terceiro > a:hover {
+	background-color:black;
+	color:white;
+	transition:0.6s;
+}
 
+.content-principal a:hover {
+	background-color: white;
+	color:black;
+	transition:0.6s;
+} 
+
+#to-top:hover{
+	background-color: black;
+	color: white;
+	transition:0.6s;
+}
 
 																			/* 		RESPONSIVIDADE 			*/
 
