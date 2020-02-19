@@ -1,21 +1,11 @@
+var menu_bar = document.querySelector(".container .menu-bar");
 
-	var $target = $('.header'),
-		animationClass = 'header-anime';
+var nav = document.querySelector(".container .nav");
 
-	function animeScroll() {
-		var documentTop = $(document).scrollTop();
+var back = document.querySelector(" .menu-background");
 
-		console.log(documentTop);
-		$target.each(function(){
-			// var itemTop = $(this).offset().top;
-
-			if(documentTop > 75) {
-				$(this).addClass(animationClass);
-			} else {
-				$(this).removeClass(animationClass);
-			}
-		});
-	}
-
-	animeScroll();
-	
+menu_bar.onclick = function () {
+	menu_bar.classList.toggle("transformMenu");
+	nav.classList.toggle("transformMenu");
+	back.classList.toggle("transformBack");
+}
